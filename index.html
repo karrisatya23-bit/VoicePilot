@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoicePilot | Your Voice, Your Assistant</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f8ff;
+      color: #17264d;
+      line-height: 1.6;
+    }
+    header {
+      background: #101d40;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .logo { font-size: 25px; font-weight: bold; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+    .hero {
+      background: linear-gradient(130deg, #101d40, #343c91);
+      color: white;
+      padding: 85px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1 1 300px; }
+    .hero h1 { font-size: clamp(42px, 7vw, 66px); line-height: 1.1; }
+    .hero h1 span { color: #8ba8ff; }
+    .hero p { margin: 22px 0; font-size: 18px; max-width: 520px; }
+    .hero-art {
+      flex: 1 1 250px;
+      text-align: center;
+      font-size: 110px;
+      background: #ffffff12;
+      border: 1px solid #ffffff30;
+      border-radius: 30px;
+      padding: 35px 10px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: #6585ff;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px 8px 5px 0;
+    }
+    .button.secondary { background: transparent; border: 1px solid white; }
+    section { padding: 60px 8%; }
+    .section-title { text-align: center; margin-bottom: 30px; }
+    .section-title h2 { font-size: 32px; }
+    .section-title p { color: #647196; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid #e2e8ff;
+      box-shadow: 0 8px 24px #182a5010;
+    }
+    .card .emoji { font-size: 32px; }
+    .card h3 { margin: 10px 0; }
+    .card p, .about p { color: #586786; }
+    .about {
+      background: white;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+    .about h2 { margin-bottom: 12px; }
+    .steps { padding-left: 22px; }
+    .steps li { margin-bottom: 12px; }
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .tech span {
+      background: #e9edff;
+      padding: 10px 17px;
+      border-radius: 25px;
+    }
+    .cta {
+      background: #101d40;
+      color: white;
+      text-align: center;
+    }
+    .cta p { margin: 10px 0 20px; }
+    footer {
+      background: #0b1530;
+      color: #c6cee5;
+      padding: 20px 8%;
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { text-align: center; }
+      nav a { margin: 5px; display: inline-block; }
+      .hero { padding-top: 55px; }
+      .hero-art { font-size: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🎙️ VoicePilot</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p>Your Voice + Smart Automation = Productivity</p>
+      <h1>Meet <span>VoicePilot</span></h1>
+      <p>A Python-based voice assistant that helps you
+      control your computer, search the web, and perform
+      everyday tasks using simple voice commands.</p>
+      <a class="button"
+         href="https://github.com/YOUR_GITHUB_USERNAME/VoicePilot"
+         target="_blank" rel="noopener">View Source Code ↗</a>
+      <a class="button secondary" href="#features">Explore Features ↓</a>
+    </div>
+    <div class="hero-art">🎙️<br>
+      <span style="font-size:18px">Just say it...</span>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="section-title">
+      <h2>What VoicePilot Can Do</h2>
+      <p>Simple voice commands. Useful results.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="emoji">🎤</div>
+        <h3>Voice Recognition</h3>
+        <p>Recognizes spoken commands and converts speech into actions.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">🔎</div>
+        <h3>Web Search</h3>
+        <p>Search Google and YouTube using your voice.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">💻</div>
+        <h3>App Control</h3>
+        <p>Open supported applications such as Notepad and Calculator.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">🔊</div>
+        <h3>System Controls</h3>
+        <p>Adjust volume and use supported computer controls.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">⌨️</div>
+        <h3>Voice Typing</h3>
+        <p>Speak words and have them typed into the active application.</p>
+      </article>
+      <article class="card">
+        <div class="emoji">🗣️</div>
+        <h3>Spoken Responses</h3>
+        <p>Uses text-to-speech to provide audible feedback.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <h2>About VoicePilot</h2>
+      <p>VoicePilot is a desktop voice-assistant project
+      developed with Python. It combines speech recognition,
+      automation, and text-to-speech to make common computer
+      tasks easier to perform.</p>
+      <h3 style="margin-top:22px">Technology Stack</h3>
+      <div class="tech">
+        <span>🐍 Python</span>
+        <span>SpeechRecognition</span>
+        <span>PyAutoGUI</span>
+        <span>pyttsx3</span>
+        <span>PyAudio</span>
+      </div>
+    </div>
+    <div id="how">
+      <h2>How It Works</h2>
+      <ol class="steps">
+        <li><b>Speak:</b> Give a supported voice command.</li>
+        <li><b>Recognize:</b> Speech recognition processes the command.</li>
+        <li><b>Execute:</b> Python runs the corresponding action.</li>
+        <li><b>Respond:</b> The assistant provides feedback.</li>
+      </ol>
+      <p><b>Example commands:</b> “Open Notepad,”
+      “Search Google for Python,” and “Volume up.”</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Explore VoicePilot?</h2>
+    <p>Check out the source code and discover the project.</p>
+    <a class="button"
+       href="https://github.com/YOUR_GITHUB_USERNAME/VoicePilot"
+       target="_blank" rel="noopener">Explore on GitHub ↗</a>
+  </section>
+</main>
+
+<footer>
+  VoicePilot · Built with Python · Hackathon Project
+</footer>
+
+</body>
+</html>
